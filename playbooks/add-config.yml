@@ -1,0 +1,17 @@
+---
+- name: Add config
+  hosts: all
+  connection: local
+  gather_facts: no
+
+  tasks:
+  - name: Add config
+    napalm_install_config:
+        hostname={{ip}}
+        username={{user}}
+        dev_os={{os}}
+        password={{passwd}}
+        config_file={{config_dir}}/{{hostname}}/config
+        commit_changes=True
+        replace_config=False
+        diff_file={{config_dir}}/{{hostname}}/config.diff

@@ -1,0 +1,7 @@
+---
+
+os: eos
+ip: 172.16.41.2
+hostname: eos-1
+user: test
+passwd: test
